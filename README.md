@@ -58,7 +58,10 @@ Diff = A ⊕ B ⊕ C B = A'C + A'B + BC
 
 ## Program:
 
-module fullsub(diff,carry,a,b,c);
+### Half Subractor:
+
+
+module halfsub(diff,carry,a,b,c);
 
 input a,b,c;
 
@@ -69,6 +72,18 @@ xor(diff,a,b,c);
 assign carry= (~a)&c | (~a)&b | (b&c);
 
 endmodule
+
+### Full Subractor:
+
+modue fs(input x,y,z,output d,b);
+
+assigh zc=x^y^z^;
+
+assign b = ~x & (y^z) | y&z;
+
+endmodule
+
+
 
 
 ## Truthtable
